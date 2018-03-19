@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     @IBAction func chageBtn(_ sender: Any) {
         let random = arc4random_uniform(5)
-        let randomInt: Int = Int(random)
+        let randomInt = Int(random)
         backgroundImage.image = backgroundImageArr[randomInt]
     }
     
