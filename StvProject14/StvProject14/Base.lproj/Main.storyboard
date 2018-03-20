@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StvProject14" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOp-Mk-pSf">
+                                <rect key="frame" x="0.0" y="270" width="375" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iu1-Pj-Sdg">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="543223051.95930004">
+                                    <!--2018-03-20 07:17:31 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja"/>
+                                <connections>
+                                    <action selector="changedLabel:" destination="BYZ-38-t0r" eventType="valueChanged" id="4jD-oh-wsd"/>
+                                </connections>
+                            </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhO-Wg-w7G">
+                                <rect key="frame" x="0.0" y="407" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="done" id="aHB-X8-uy5">
+                                        <connections>
+                                            <action selector="doneBtn:" destination="BYZ-38-t0r" id="pJO-fM-a1o"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NOp-Mk-pSf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="19P-Gm-Hz1"/>
+                            <constraint firstItem="NOp-Mk-pSf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="2Sv-J2-ANl"/>
+                            <constraint firstItem="iu1-Pj-Sdg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AOH-gn-8qr"/>
+                            <constraint firstItem="iu1-Pj-Sdg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ASh-7p-bDK"/>
+                            <constraint firstItem="iu1-Pj-Sdg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qm5-8o-cKo"/>
+                            <constraint firstItem="NOp-Mk-pSf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WNw-e8-NrK"/>
+                            <constraint firstItem="YhO-Wg-w7G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YYW-6F-fFh"/>
+                            <constraint firstItem="iu1-Pj-Sdg" firstAttribute="top" secondItem="YhO-Wg-w7G" secondAttribute="bottom" id="pNd-ux-9bJ"/>
+                            <constraint firstItem="YhO-Wg-w7G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r0J-xM-LSa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="NOp-Mk-pSf" id="clV-fc-ho1"/>
+                        <outlet property="datePicker" destination="iu1-Pj-Sdg" id="GVH-FL-Ggh"/>
+                        <outlet property="toolbar" destination="YhO-Wg-w7G" id="8kS-af-m8X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
