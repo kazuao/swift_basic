@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         // BOOL型
         let sampleBool1 = true
@@ -31,13 +30,21 @@ class ViewController: UIViewController {
         // Number型いろいろ
         let sampleDouble = 1.11
         print(sampleDouble)
+        
+        // Array型いろいろ
+        let sampleArray = [1, 2, 3, 4, 5]
+        print(sampleArray[1])
+        
+        // Dictionaly型いろいろ
+        let sampleDictionaly = [
+            "hoge": "ほげ",
+            "fuga": "ふが",
+            "piyo": "ぴよ"
+        ]
+        print(sampleDictionaly["hoge"] ?? "なし")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
-
