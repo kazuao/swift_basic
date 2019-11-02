@@ -6,8 +6,8 @@
 //  Copyright © 2018年 kazua. All rights reserved.
 //
 
-import XCTest
 @testable import StvProject2
+import XCTest
 
 class StvProject2Tests: XCTestCase {
     

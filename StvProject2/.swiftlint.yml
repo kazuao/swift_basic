@@ -1,7 +1,7 @@
 # 対象にするパス
 included:
-  - <Project Name>
-  - <Project Name>Tests
+  - StvProject2
+  - StvProject2Tests
 
 # 対象から除外するパス
 excluded:

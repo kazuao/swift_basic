@@ -13,19 +13,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Array型
-        let sampleArrString: [String]  = ["醤油", "味噌", "塩", "豚骨"]
-        print(sampleArrString)
-        let sampleArrInteger = [99, 12, 16, 23]
-        print(sampleArrInteger)
-        let sampleArrDouble  = [12.3, 54, 32.445, 11.1]
-        print(sampleArrDouble)
-        print(sampleArrDouble[2])
+        // 宣言
+        let optionalBindingString: String? = "optional yet"
+        let optionalChainingString: String? = "optional yet2"
+        let optionalNilCoalescingOperatorString: String? = nil
         
-        // Dictionary型
-        let sampleDic: [String: String] = ["豚": "pig", "牛": "beef", "鳥": "chicken"];
-        print(sampleDic)
-        print(sampleDic["牛"]!)
+        // Optional Chaining
+        guard let tryOptionalBindingString = optionalBindingString else {
+            return print("nilだ")
+        }
+        print(tryOptionalBindingString)
+        
+        // Optional Biniding
+        if let tryOptionalChainingString = optionalChainingString?.uppercased() {
+            print(tryOptionalChainingString)
+        } else {
+            print("nilだ")
+        }
+        
+        // Nil Coalescing Operator
+        let tryNilCoalescingOperatorString = optionalNilCoalescingOperatorString ?? "nilだ"
+        print(tryNilCoalescingOperatorString)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +41,5 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
+ 
