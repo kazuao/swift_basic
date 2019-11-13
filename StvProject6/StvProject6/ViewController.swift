@@ -15,11 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        changeLabel.text = NSLocalizedString("Objective-C lecture started", comment: "")
+        changeLabel.text = NSLocalizedString("SwiftLectureStarted", comment: "")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 }
