@@ -13,42 +13,56 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let sampleStr = "HogeHoge";
-        
+        /**
+         * if文のサンプルっす😎
+         */
         // if
-        if (sampleStr == "HogeHoge") {
-            print(sampleStr + " if")
+        let tryIfString = "'try if'"
+    
+        if !tryIfString.isEmpty {
+            print("\(tryIfString) if part is correct!")
         }
         
         // if ~ else
-        if (sampleStr == "FugaFuga") {
-            print(sampleStr + " Fuga")
+        if tryIfString.isEmpty {
+            print("\(tryIfString) else part is false!")
+            
         } else {
-            print(sampleStr + " else")
+            print("\(tryIfString) else part is correct!")
         }
-        
         
         // if ~ else if
-        if (sampleStr == "FugaFuga") {
-            print(sampleStr + " Fuga")
-        } else if (sampleStr == "HogeHoge") {
-            print(sampleStr + " else if")
+        if tryIfString.isEmpty {
+            print("\(tryIfString) else if part is false!")
+            
+        } else if !tryIfString.isEmpty {
+            print("\(tryIfString) else if part is correct!")
+            
+        } else {
+            print("\(tryIfString) else if part is false!!")
         }
         
-        // 三項演算子
-        let sampleBool  = "Hoge"
-        let sampleBool2 = "Fuga"
-        let conditional1 = sampleBool  == "Hoge" ? "true": "false"
-        let conditional2 = sampleBool2 == "Hoge" ? "true": "false"
+        /**
+         * 三項演算子のサンプルっす😎
+         */
+        let tryTernaryOperatorBoolTrue = "true"
+        let tryTernaryOperatorBoolFalse = "false"
+        
+        let conditional1 = tryTernaryOperatorBoolTrue == "true" ? "trueだよ" : "falseだよ"
         print(conditional1)
+        
+        let conditional2 = tryTernaryOperatorBoolFalse == "true" ? "trueだよ" : "falseだよ"
         print(conditional2)
         
-        // for
-        for i in 0..<5 {
-            print("i: \(i)")
+        /**
+         * for文のサンプルっす😎
+         */
+        for tryForInteger in 0 ..< 5 {
+            print("Try For: \(tryForInteger)")
         }
-        for i in (0..<5).reversed() {
-            print("i: \(i)")
+        
+        for tryForReverseInteger in (0 ..< 5).reversed() {
+            print("Try For Reverse: \(tryForReverseInteger)")
         }
         
         // for ~ in
@@ -56,29 +70,32 @@ class ViewController: UIViewController {
         for fruit in fruits {
             print(fruit)
         }
-        let fishs = ["tuna": "マグロ", "aji": "アジ", "saba": "サバ"]
-        for (key, value) in fishs {
+        let fishes = ["tuna": "マグロ", "aji": "アジ", "saba": "サバ"]
+        for (key, value) in fishes {
             print("key: \(key), value: \(value)")
         }
         
-        // switch
-        let value = "b"
+        /**
+        * Switch文のサンプルっす😎
+        */
+        let value = "fuga"
+        
         switch value {
-        case "a":
-            print("a")
-        case "b":
-            print("b")
+            
+        case "hoge":
+            print("hogehoge")
+            
+        case "fuga":
+            print("fugafuga")
             fallthrough
+            
         default:
-            print(" to c")
+            print("でした")
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
 }
-
