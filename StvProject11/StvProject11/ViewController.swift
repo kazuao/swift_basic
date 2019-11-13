@@ -14,20 +14,34 @@ class ViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var toolbar: UIToolbar!
     
+    // LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let myURL = URL(string: "http://food-List.tokyo/")
-//        let myURL = URL(string: "https://www.apple.com")
+        
+        webViewSetUp()
+    }
+    
+    // MARK: set up
+    
+    private func webViewSetUp() {
+        // http接続テスト用
+        let myURL = URL(string: "http://www.metro.tokyo.jp//")
+        // https接続テスト用
+//        let myURL = URL(string: "https://www.apple.com/")
+        
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
+    
+    // MARK: IBAction
     @IBAction func backBtn(_ sender: Any) {
         webView.goBack()
     }
+    
     @IBAction func forwardBtn(_ sender: Any) {
         webView.goForward()
     }
+    
     @IBAction func refreshBtn(_ sender: Any) {
         webView.reload()
     }
