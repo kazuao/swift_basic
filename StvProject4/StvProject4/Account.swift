@@ -10,23 +10,23 @@ import UIKit
 
 class Account: NSObject {
     
-    var name: String = "name"
-    var age: Int     = 20
-    var sex: String  = "sex"
-    var lang: String = "lang"
+    var name: String = "Taro"
+    var age: Int = 20
+    var sex: String  = "man"
+    var lang: String = "Kotlin"
     
     init(name: String, age: Int, sex: String, lang: String) {
         self.name = name
-        self.age  = age
-        self.sex  = sex
+        self.age = age
+        self.sex = sex
         self.lang = lang
     }
 
     func introduction() {
-        if self.sex == "man" {
-            print("\(self.name)くんは、\(self.lang)が得意な\(self.age)歳です。")
+        if sex == "man" {
+            print("\(name)くんは、\(lang)が得意な\(age)歳です。")
         } else {
-            print("\(self.name)さんは、\(self.lang)が得意な\(self.age)歳です。")
+            print("\(name)さんは、\(lang)が得意な\(age)歳です。")
         }
     }
 }

@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var ken = Account(name: "ken", age: 20, sex: "men", lang: "PHP")
-    var aya = Account(name: "aya", age: 12, sex: "women", lang: "swift")
+    var ken = Account(name: "Ken", age: 20, sex: "men", lang: "PHP")
+    var aya = Account(name: "Aya", age: 12, sex: "women", lang: "swift")
     
     var accounts: [Account] = []
     
@@ -27,6 +27,5 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
