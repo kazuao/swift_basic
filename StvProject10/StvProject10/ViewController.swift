@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    // MARK: IBAction
     @IBAction func showActionSheetBtn(_ sender: Any) {
         
         let alertController: UIAlertController =
@@ -25,15 +26,17 @@ class ViewController: UIViewController {
         
         let facebookAction: UIAlertAction =
             UIAlertAction(title: "Facebook", style: .default, handler: { (_: UIAlertAction) -> Void in
-                print("Facebookボタンを押しました。")
+                self.facebookAlertAction()
             })
+        
         let twitterAction: UIAlertAction =
             UIAlertAction(title: "Twitter", style: .default, handler: { (_: UIAlertAction) -> Void in
-                print("Twitterボタンを押しました。")
+                self.twitterAlertAction()
             })
+        
         let lineAction: UIAlertAction =
             UIAlertAction(title: "LINE", style: .default, handler: { (_: UIAlertAction) -> Void in
-                print("LINEボタンを押しました。")
+                self.lineAlertAction()
             })
         
         alertController.addAction(facebookAction)
@@ -41,5 +44,18 @@ class ViewController: UIViewController {
         alertController.addAction(lineAction)
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: AlertAction
+    private func facebookAlertAction() {
+        print("Facebookボタンを押しました。")
+    }
+    
+    private func twitterAlertAction() {
+        print("Twitterボタンを押しました。")
+    }
+    
+    private func lineAlertAction() {
+        print("LINEボタンを押しました。")
     }
 }
