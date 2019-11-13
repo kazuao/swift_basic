@@ -9,16 +9,16 @@
 import UIKit
 
 @objc protocol FavoriteProgrammingLanguageDelegate {
-    @objc optional func canDoObjC()
+    @objc optional func canDoSwift()
 }
 
 class FavoriteProgrammingLanguage: NSObject {
     
     weak var delegate: FavoriteProgrammingLanguageDelegate?
     
-    func joinIntern() {
-        print("インターンに参加する！")
+    func joinIntern(name: String) {
+        print("\(name)は、インターンに参加する！")
         // デリゲートを呼ぶ
-        self.delegate?.canDoObjC?()
+        self.delegate?.canDoSwift?()
     }
 }
