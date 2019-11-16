@@ -14,6 +14,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet private weak var pickerView: UIPickerView!
     @IBOutlet private weak var toolBar: UIToolbar!
     
+    private let pickerNumberOfContents = 1
+    
     var picNumber = ["1", "2", "3", "4", "5"]
     
     override func viewDidLoad() {
@@ -29,8 +31,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         disablePicker()
         
         // Labelをタップした際のイベント
-        let tap: UITapGestureRecognizer =
-            UITapGestureRecognizer(target: self, action: #selector(self.tapped))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                 action: #selector(self.tapped))
         pickerLabel.isUserInteractionEnabled = true
         pickerLabel.addGestureRecognizer(tap)
     }
@@ -69,7 +71,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
      pickerViewのdelegate & datasourceのメソッド
     */
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return pickerNumberOfContents
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -86,6 +88,5 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
 }
